@@ -7,6 +7,38 @@ Todo:
 
 ---
 
+v6.4.2
+
+1. 小地图 /aq settings 改为直接弹出独立设置窗口（不再依赖 Settings.OpenToCategory）
+2. 设置未初始化时在聊天框给出提示
+
+1. Minimap /aq settings now opens a standalone options window
+2. Print a chat hint when settings are not initialized yet
+
+---
+
+v6.4.1
+
+1. 修复小地图图标 /aq settings 无法打开设置窗口
+2. 覆盖暴雪损坏的 InterfaceOptionsFrame_OpenToCategory 兼容层
+
+1. Fix minimap icon /aq settings not opening the options panel
+2. Override Blizzard's broken InterfaceOptionsFrame_OpenToCategory shim
+
+---
+
+v6.4
+
+1. 支持 Classic Era 1.15.9（香草怀旧服）
+2. 适配 C_Container 背包 API 与 Settings 设置面板
+3. 不改变原有功能逻辑
+
+1. Support Classic Era 1.15.9 (Vanilla Classic Era)
+2. Compatibility for C_Container bag APIs and Settings panel
+3. No gameplay/feature changes
+
+---
+
 v6.2
 
 1. 支持2.5.3

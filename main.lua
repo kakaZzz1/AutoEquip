@@ -21,8 +21,9 @@ local MiniIconLDB = LibStub("LibDataBroker-1.1"):NewDataObject("AutoEquip", {
         text = "AutoEquip",
         icon = 136115,
         OnClick = function()
-            InterfaceOptionsFrame_OpenToCategory(SELFAQ.top);
-            InterfaceOptionsFrame_OpenToCategory(SELFAQ.top);
+            -- Always open standalone settings; Blizzard Settings.OpenToCategory
+            -- is unreliable for this addon's canvas panels on Classic Era.
+            SELFAQ.openSettings(SELFAQ.general or SELFAQ.top)
         end,
         OnEnter = function(owner)
             local anchor = owner:GetBottom() < GetScreenHeight() / 2 and 'ANCHOR_TOP' or 'ANCHOR_BOTTOM'
@@ -335,8 +336,7 @@ function SELFAQ.mainInit()
             SELFAQ.enableAutoEuquip()
 
         elseif msg == "settings" then
-             InterfaceOptionsFrame_OpenToCategory(SELFAQ.top);
-             InterfaceOptionsFrame_OpenToCategory(SELFAQ.top);
+             SELFAQ.openSettings(SELFAQ.top)
 
         elseif msg == "pvp" then
             SELFAQ. enablePvpMode()

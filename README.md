@@ -2,7 +2,7 @@
 
 ## 简介
 
-本插件适用于魔兽世界怀旧服（World of Warcraft Classic）各语言版本。
+本插件适用于魔兽世界怀旧服 Classic Era（香草 60 级）各语言版本（Interface 11509）。
 
 1. 主动饰品（如短暂能量护符、思维加速宝石、赞达拉英雄护符）使用，结束战斗自动换下
 2. 脱离战斗时，主动饰品CD结束30秒以内换上（换上主动饰品有30秒CD）
@@ -27,7 +27,9 @@ buffTime[20130] = 60                    -- 钻石水瓶
 ## 安装
 
 1. 下载压缩包
-2. 解压缩后将 AutoEquip 文件夹复制到 World of Warcraft\_classic_\Interface\AddOns\ 文件夹里
+2. 解压缩后将 AutoEquip 文件夹复制到对应客户端的插件目录：
+   - Classic Era（香草怀旧服）：`World of Warcraft\_classic_era_\Interface\AddOns\`
+   - 其他怀旧客户端（若仍可用）：`World of Warcraft\_classic_\Interface\AddOns\`
 3. 重新打开游戏
 
 ## 配置

@@ -206,8 +206,7 @@ function  SELFAQ.createMenu()
 	menu[3] = {}
 	menu[3]["text"] = L[" Settings"]
 	menu[3]["func"] = function()
-		InterfaceOptionsFrame_OpenToCategory(SELFAQ.general);
-		InterfaceOptionsFrame_OpenToCategory(SELFAQ.general);
+		SELFAQ.openSettings(SELFAQ.general)
 	end
 
 	menu[4] = {}
@@ -262,8 +261,8 @@ function SELFAQ.createItemButton( slot_id, position )
 
 	button.itemId = itemId
 
-	-- 不然会继承parent的按键设置
-	button:RegisterForClicks("AnyDown")
+	-- 不然会继承parent的按键设置（AnyUp+AnyDown 兼容 Classic Era 1.15+）
+	button:RegisterForClicks("AnyUp", "AnyDown")
 
 	-- 左键触发物品
 	button:SetAttribute("type1", "item")
@@ -1253,8 +1252,8 @@ SELFAQ.createQBOne = function(word, order, show, func)
 	
 	t:SetAllPoints(button)
 
-	-- 不然会继承parent的按键设置
-	button:RegisterForClicks("AnyDown")
+	-- 不然会继承parent的按键设置（AnyUp+AnyDown 兼容 Classic Era 1.15+）
+	button:RegisterForClicks("AnyUp", "AnyDown")
 	button:Show()
 
     -- 右键解锁

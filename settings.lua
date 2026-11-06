@@ -81,8 +81,7 @@ function SELFAQ.settingInit()
         b:SetHeight(30)
         b:SetPoint("TOPLEFT", top, 23, -60)
         b:SetScript("OnClick", function(self)
-            InterfaceOptionsFrame_OpenToCategory(p);
-            InterfaceOptionsFrame_OpenToCategory(p);
+            SELFAQ.openSettings(p)
     end)
 
     do
