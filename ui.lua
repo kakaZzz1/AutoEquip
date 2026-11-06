@@ -206,8 +206,7 @@ function  SELFAQ.createMenu()
 	menu[3] = {}
 	menu[3]["text"] = L[" Settings"]
 	menu[3]["func"] = function()
-		InterfaceOptionsFrame_OpenToCategory(SELFAQ.general);
-		InterfaceOptionsFrame_OpenToCategory(SELFAQ.general);
+		SELFAQ.openSettings(SELFAQ.general)
 	end
 
 	menu[4] = {}
